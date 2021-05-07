@@ -69,7 +69,7 @@ window.onbeforeunload=()=>{//不能存对象，需要变字符串
 $(document).on('keypress',(e)=>{
   const {key}=e//等效key=e.key
   for (let i = 0; i < hashMap.length; i++) {
-    if(hashMap[i].logo.toLowerCase()===key){
+    if(simplifyUrl(hashMap[i].url)[0].toLowerCase()===key){
       window.open(hashMap[i].url)
     }
   }
